@@ -158,7 +158,8 @@ The following configuration variables apply to the main ``lvgl`` component, in o
 - **log_level** (*Optional*, string): Set the logger level specifically for the messages of the LVGL library: ``TRACE``, ``INFO``, ``WARN``, ``ERROR``, ``USER``, ``NONE``. Defaults to ``WARN``.
 - **byte_order** (*Optional*, int16): The byte order of the data LVGL outputs; either ``big_endian`` or ``little_endian``. Defaults to ``big_endian``.
 - **disp_bg_color** (*Optional*, :ref:`color <lvgl-color>`): Solid color used to fill the background. Can be changed at runtime with the ``lvgl.update`` action.
-- **disp_bg_image** (*Optional*, :ref:`image <display-image>`):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the ``lvgl.update`` action. Also see :ref:`lvgl-widget-image` for a note regarding supported image formats.
+- **disp_bg_image** (*Optional*, :ref:`image <display-image>`):  The ID of an existing image configuration, to be used as background wallpaper. To change the image at runtime use the ``lvgl.update`` action. Also see :ref:`lvgl-widget-image` for a note regarding supported image formats. May also be set to ``none`` to clear the background image.`
+- **disp_bg_opa** (*Optional*, :ref:`opacity <lvgl-opacity>`): Opacity of the background image or color of the display.
 - **default_font** (*Optional*, ID): The ID of the :ref:`font <lvgl-fonts>` used by default to render the text or symbols. Defaults to LVGL's internal ``montserrat_14`` if not specified.
 - **style_definitions** (*Optional*, list): A batch of style definitions to use in LVGL widget's ``styles`` configuration. See :ref:`below <lvgl-theme>` for more details.
 - **gradients** (*Optional*, list): A list of gradient definitions to use in *bg_grad* styles. See :ref:`below <lvgl-gradients>` for more details.
